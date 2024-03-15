@@ -1,4 +1,5 @@
 import { GraphQLResolveInfo } from 'graphql';
+import { PlaylistModel, TrackModel } from './models';
 import { DataSourceContext } from './context';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
@@ -132,10 +133,10 @@ export type ResolversTypes = {
   Boolean: ResolverTypeWrapper<Scalars['Boolean']['output']>;
   ID: ResolverTypeWrapper<Scalars['ID']['output']>;
   Int: ResolverTypeWrapper<Scalars['Int']['output']>;
-  Playlist: ResolverTypeWrapper<Playlist>;
+  Playlist: ResolverTypeWrapper<PlaylistModel>;
   Query: ResolverTypeWrapper<{}>;
   String: ResolverTypeWrapper<Scalars['String']['output']>;
-  Track: ResolverTypeWrapper<Track>;
+  Track: ResolverTypeWrapper<TrackModel>;
 };
 
 /** Mapping between all available schema types and the resolvers parents */
@@ -143,10 +144,10 @@ export type ResolversParentTypes = {
   Boolean: Scalars['Boolean']['output'];
   ID: Scalars['ID']['output'];
   Int: Scalars['Int']['output'];
-  Playlist: Playlist;
+  Playlist: PlaylistModel;
   Query: {};
   String: Scalars['String']['output'];
-  Track: Track;
+  Track: TrackModel;
 };
 
 export type PlaylistResolvers<ContextType = DataSourceContext, ParentType extends ResolversParentTypes['Playlist'] = ResolversParentTypes['Playlist']> = {

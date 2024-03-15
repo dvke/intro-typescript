@@ -15,4 +15,7 @@ export const resolvers: Resolvers = {
       return items.map(({ track }) => track);
     },
   },
+  Track: {
+    durationMs: (parent) => parent.duration_ms,
+  },
 };
